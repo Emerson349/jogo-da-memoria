@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #13171F;
+    height: 100vh; 
+}
+
+.main-container {
+    background-color: #13171F;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.main-div {
+    position: relative;
+    background: linear-gradient(135deg, #4A00E0, #a346f5);
+    max-width: 700px;
+    margin: 46px auto;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.main-div::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #4A00E0, #9d3bf4);
+    filter: blur(3.0rem);
+    opacity: 0.5;
+}
+
+.card {
+    width: 90%;
+    aspect-ratio: 9/10;
+    justify-self: center; 
+    align-self: center; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.4s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.face {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.back {
+    background: linear-gradient(135deg, #4A00E0, #8E2DE2);
+    backface-visibility: hidden;
+}
+
+.front {
+    background: linear-gradient(135deg, #9d7fb7, #886ebc);
+}    
+
+.front img {
+   transform: scale(0.8) scaleX(-1);
+}
+
+.card.active {
+    transform: rotateY(180deg);
+}
+
+.card i { 
+    color: #BB86FC;
+    font-size: 1.7rem;
+}
+
+.card.matched {
+    opacity: 0.3;              
+    pointer-events: none;
+    transform: rotateY(180deg);
+    .front {
+        z-index: 1;
+    }  
+}
+
+.header {
+    font-family: "Poppins", sans-serif;
+    margin-top: 20px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1.2rem;
+}
+
+.player {
+    background: linear-gradient(90deg, #D68DD3, #90A8EF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.2rem;
+}
+
+.timer {
+    background: linear-gradient(90deg, #D68DD3, #90A8EF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    gap: 80px;
+    font-size: 1.1rem;
+}
+
+#moves,
+.time {
+  display: inline-block;
+  min-width: 30px;
+  text-align: right;
+}
