@@ -1,7 +1,5 @@
 # 🧠 Jogo da Memória
 
-![Badge](https://img.shields.io/badge/Status-Concluído-brightgreen)
-
 ## 📋 Descrição
 
 Este é um **Jogo da Memória** desenvolvido utilizando **HTML**, **CSS** e **JavaScript**.  
