@@ -6,7 +6,7 @@
 
 body {
     background-color: #13171F;
-    height: 100vh; 
+    height: 100vh;
 }
 
 .main-container {
@@ -43,8 +43,8 @@ body {
 .card {
     width: 90%;
     aspect-ratio: 9/10;
-    justify-self: center; 
-    align-self: center; 
+    justify-self: center;
+    align-self: center;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     position: relative;
@@ -69,28 +69,29 @@ body {
 
 .front {
     background: linear-gradient(135deg, #9d7fb7, #886ebc);
-}    
+}
 
 .front img {
-   transform: scale(0.8) scaleX(-1);
+    transform: scale(0.8) scaleX(-1);
 }
 
 .card.active {
     transform: rotateY(180deg);
 }
 
-.card i { 
+.card i {
     color: #BB86FC;
     font-size: 1.7rem;
 }
 
 .card.matched {
-    opacity: 0.3;              
+    opacity: 0.3;
     pointer-events: none;
     transform: rotateY(180deg);
+
     .front {
         z-index: 1;
-    }  
+    }
 }
 
 .header {
@@ -126,7 +127,36 @@ body {
 
 #moves,
 .time {
-  display: inline-block;
-  min-width: 30px;
-  text-align: right;
+    display: inline-block;
+    min-width: 30px;
+    text-align: right;
+}
+
+/*Design Responsivo */
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+        aspect-ratio: 4/5;
+    }
+
+    .card i {
+        font-size: 1.3rem;
+    }
+
+    .header {
+        width: 95%;
+        padding: 20px 5px;
+        font-size: 1.0rem;
+    }
+
+    #moves,
+    .time {
+        text-align: center;
+        display: block;
+    }
+
+    .timer {
+        gap: 20px;
+    }
 }
